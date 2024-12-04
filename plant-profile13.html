@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinal Plants - Acacia jacquemontii Benth Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS for image resizing and black border */
+        .image-container {
+            display: inline-block;
+            border: 2px solid black;
+            padding: 5px;
+            background-color: white;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: auto;
+        }
+
+        /* Other styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            margin-left: 1px;
+        }
+
+        header {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #plant-profile {
+            text-align: left;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: left;
+            margin-top: 50px;
+        }
+
+        /* Flexbox layout for Left-Center-Right alignment */
+        .buttons-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 20px;
+            max-width: 600px;
+        }
+
+        .buttons-container button {
+            width: 150px;
+            padding: 10px 0;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .download-btn {
+            background-color: #007bff;
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+
+        .telegram-btn {
+            background-color: #0088cc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>HerbaLife Hub. Where Nature Heals, Naturally</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Plant Catalog</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Plant Profile Section -->
+    <section id="plant-profile">
+        <h2>Acacia jacquemontii Benth</h2>
+        <div class="image-container">
+            <img src=https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003539L.jpg alt="Acacia jacquemontii Benth.">
+        </div>
+        
+        <h3>Common Name: </h3>
+        <p>Acacia jacquemontii</p>
+        
+        <h3>Medicinal Uses:</h3>
+        <p><strong>Traditional Remedies:</strong> The plant's bark, roots, and gum have been used for ailments such as snakebites, renal disorders, and as an abortifacient.</p>
+        <p><strong>Modern Research:</strong> Recent studies suggest antioxidant and anti-inflammatory activities.</p>
+
+        <h3>Cultivation and Harvesting Methods:</h3>
+        <p><strong>Propagation:</strong> Can be propagated from seeds or cuttings. Seeds require scarification or soaking in hot water to break dormancy.</p>
+        <p><strong>Soil and Climate:</strong> Thrives in arid and semi-arid conditions, tolerating poor soils and drought.</p>
+        <p><strong>Harvesting:</strong> Gum is harvested during the dry season; other parts can be collected at any time.</p>
+
+        <h3>Ecological Importance:</h3>
+        <p>Stabilizes sand dunes, provides habitat and food for wildlife, and improves soil fertility through nitrogen fixation.</p>
+
+        <p><strong>Note:</strong> Consult with a healthcare professional before using any plant-based remedies.</p>
+
+        <a href="https://www.amazon.in/s?k=Acacia+jacquemontii+Benth&ref=nb_sb_noss" class="button">Buy Seeds on Amazon</a>
+
+        <!-- Buttons Container for Download, WhatsApp, and Telegram -->
+        <div class="buttons-container">
+            <button class="download-btn" id="downloadBtn">Download PDF</button>
+            <button class="whatsapp-btn" onclick="shareOnWhatsApp()">WhatsApp</button>
+            <button class="telegram-btn" onclick="shareOnTelegram()">Telegram</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; HerbaLife Hub. Where Nature Heals, Naturally.</p>
+    </footer>
+
+    <!-- Include html2pdf.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+    <script>
+        // Function to download the entire page as PDF
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            var element = document.body; // Select the whole body content
+            html2pdf()
+                .from(element)
+                .save(); // Save the page as a PDF
+        });
+
+        // Function to share on WhatsApp
+        function shareOnWhatsApp() {
+            const text = encodeURIComponent("Check out this medicinal plant: Acacia jacquemontii Benth - It has great medicinal properties. Here's more info: [Your URL here]");
+            const url = `https://api.whatsapp.com/send?text=${text}`;
+            window.open(url, '_blank');
+        }
+
+        // Function to share on Telegram
+        function shareOnTelegram() {
+            const text = encodeURIComponent("Check out this medicinal plant: Acacia jacquemontii Benth - It has great medicinal properties. Here's more info: [Your URL here]");
+            const telegramUrl = `https://t.me/share/url?url=[Your URL here]&text=${text}`;
+            window.open(telegramUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

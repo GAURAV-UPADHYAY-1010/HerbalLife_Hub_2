@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinal Plants - Plant Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS for image resizing and black border */
+        .image-container {
+            display: inline-block;
+            border: 2px solid black;
+            padding: 5px;
+            background-color: white;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: auto;
+        }
+
+        /* Other styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            margin-left: 1px; /* Move content away from the left edge */
+        }
+
+        header {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #plant-profile {
+            text-align: left;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: left;
+            margin-top: 50px;
+        }
+
+        /* Flexbox layout for Left-Center-Right alignment */
+        .buttons-container {
+            display: flex;
+            justify-content: flex-start; /* Align buttons to the left */
+            align-items: center;
+            margin-top: 20px;
+            max-width: 600px;
+        }
+
+        .buttons-container button {
+            width: 150px; /* Equal button width */
+            padding: 10px 0; /* Equal height */
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            margin-right: 10px; /* Add space between buttons */
+        }
+
+        /* Download button specific styles */
+        .download-btn {
+            background-color: #007bff; /* Custom blue color for the download button */
+        }
+
+        /* WhatsApp button specific styles */
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+
+        /* LinkedIn button specific styles */
+        .telegram-btn {
+            background-color: #0088cc; /* Telegram's blue color */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>HerbaLife Hub. Where Nature Heals, Naturally</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Plant Catalog</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Plant Profile Section -->
+    <section id="plant-profile">
+        <h2>Abrus precatorius L.</h2>
+        <div class="image-container">
+            <img src=https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003654L.jpg alt="Abrus precatorius L.">
+        </div>
+        <h3>Abrus precatorius L.</h3>
+        <p>Common Name: Ratti, Ghungchi</p>
+        <p>Family: FABACEAE</p>
+        <h3>Medicinal Properties: </h3>
+        <p>Skin conditions, Eye diseases, Respiratory disorders, Fever, Rheumatism, Snakebites.</p>
+        <p><strong>Note:</strong> Use with extreme caution as the plant is highly toxic due to the presence of abrin.</p>
+        
+        <h3>Cultivation</h3>
+        <h4>Climate:</h4> <p>Thrives in tropical and subtropical regions with ample sunlight.</p> 
+        <p>Soil: Prefers fertile, well-drained soil with a slightly acidic pH.</p>
+        <p>Planting: Propagate through seeds. Sow directly into the soil after the last frost.</p>
+        <p>Watering: Regular watering is required, especially during dry periods.</p>
+        <p>Fertilizing: Apply a balanced fertilizer as needed during the growing season.</p>
+
+        <h3>Harvesting</h3>
+        <h4>Seeds:</h4> <p>Harvest the mature seed pods when they turn brown and dry.</p>
+        <p><strong>Important:</strong> The seeds are highly toxic. Handle with care, wear gloves, and avoid ingestion.</p>
+        
+        <p><strong>Caution:</strong> Abrus precatorius is extremely toxic, and ingestion of even a small amount can be fatal. Avoid using this plant for medicinal purposes. Seek medical help immediately if poisoning is suspected.</p>
+
+        <a href="https://www.amazon.in/s?k=Abrus+precatorius+seeds" class="button">Buy Seeds on Amazon</a>
+
+        <!-- Buttons for download, WhatsApp, and LinkedIn sharing -->
+        <div class="buttons-container">
+            <button class="download-btn" id="downloadBtn">Download PDF</button>
+            <button class="whatsapp-btn" onclick="shareOnWhatsApp()">WhatsApp</button>
+            <button class="telegram-btn" onclick="shareOnTelegram()">Telegram</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy;  HerbaLife Hub. Where Nature Heals, Naturally.</p>
+    </footer>
+
+    <!-- Include html2pdf.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+    <script>
+        // Function to download the entire page as PDF
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            var element = document.body; 
+            html2pdf().from(element).save(); 
+        });
+
+        // Function to share on WhatsApp
+        function shareOnWhatsApp() {
+            const text = encodeURIComponent("Check out this medicinal plant: Abrus precatorius - It has great medicinal properties but is highly toxic.");
+            const url = `https://api.whatsapp.com/send?text=${text}`;
+            window.open(url, '_blank');
+        }
+
+        // Function to share on LinkedIn
+        function shareOnTelegram() {
+            const text = encodeURIComponent("Check out this medicinal plant: Abelmoschus esculentus (L.) Moench - It has great medicinal properties. Here's more info: [Your URL here]");
+            const telegramUrl = `https://t.me/share/url?url=[Hellow]&text=${text}`;
+            window.open(telegramUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

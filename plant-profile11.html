@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinal Plants - Acacia catechu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS for image resizing and black border */
+        .image-container {
+            display: inline-block;
+            border: 2px solid black;
+            padding: 5px;
+            background-color: white;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: auto;
+        }
+
+        /* Other styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            margin-left: 1px;
+        }
+
+        header {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #plant-profile {
+            text-align: left;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: left;
+            margin-top: 50px;
+        }
+
+        /* Flexbox layout for Left-Center-Right alignment */
+        .buttons-container {
+            display: flex;
+            justify-content: flex-start; /* Align buttons to the left */
+            align-items: center;
+            margin-top: 20px;
+            max-width: 600px;
+        }
+
+        .buttons-container button {
+            width: 150px;
+            padding: 10px 0;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        /* Download button specific styles */
+        .download-btn {
+            background-color: #007bff;
+        }
+
+        /* WhatsApp button specific styles */
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+
+        /* LinkedIn button specific styles */
+        .telegram-btn {
+            background-color: #0088cc; /* Telegram's blue color */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>HerbaLife Hub. Where Nature Heals, Naturally</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Plant Catalog</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Plant Profile Section -->
+    <section id="plant-profile">
+        <h2>Acacia catechu (L.f.) Willd.</h2>
+        <div class="image-container">
+            <img src=https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003537L.jpg alt="Acacia catechu (L.f.) Willd.">
+        </div>
+        <h3>Common Names:</h3>
+        <p>Indian catechu, Khair, Cutch tree</p>
+        <p>Family: FABACEAE (Leguminosae)</p>
+        
+        <h3>Medicinal Uses:</h3>
+        <ul>
+            <li>Antidiarrheal properties: Tannins in the heartwood reduce diarrhea.</li>
+            <li>Antioxidant effects: Protect cells from damage.</li>
+            <li>Antimicrobial activity: Antibacterial and antifungal properties.</li>
+            <li>Oral health: Used in mouthwashes and toothpastes.</li>
+            <li>Other applications: Treats skin conditions, ulcers, and dysentery.</li>
+        </ul>
+
+        <h3>Cultivation Methods:</h3>
+        <h4>Climate:</h4> <p>Thrives in tropical and subtropical climates with ample sunlight.</p> 
+        <h4>Soil:</h4> <p>Prefers well-drained, fertile soil with slightly acidic pH.</p>
+        <h4>Planting:</h4> <p>Propagate through seeds or cuttings; sow directly or transplant cuttings.</p>
+        <h4>Spacing:</h4> <p>Plant seedlings or cuttings 10-15 feet apart.</p>
+        <h4>Watering:</h4> <p>Water regularly, especially during dry periods. Avoid overwatering.</p>
+        <h4>Fertilizing:</h4> <p>Apply balanced fertilizer as needed during the growing season.</p>
+        <h4>Pruning:</h4> <p>Regular pruning is needed to maintain shape and promote growth.</p>
+
+        <h3>Harvesting:</h3>
+        <p>Heartwood: Harvested from mature trees by making incisions to extract sap, which is dried and processed into catechu.</p>
+        
+        <p><strong>Note:</strong> While Acacia catechu has traditional medicinal uses, it's essential to consult a healthcare professional before using herbal remedies. Excessive consumption can have adverse effects on health.</p>
+
+        <a href="https://www.amazon.in/s?k=Acacia+catechu+seeds" class="button">Buy Seeds on Amazon</a>
+
+        <!-- Buttons for download, WhatsApp, and LinkedIn sharing -->
+        <div class="buttons-container">
+            <button class="download-btn" id="downloadBtn">Download PDF</button>
+            <button class="whatsapp-btn" onclick="shareOnWhatsApp()">WhatsApp</button>
+            <button class="telegram-btn" onclick="shareOnTelegram()">Telegram</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; HerbaLife Hub. Where Nature Heals, Naturally.</p>
+    </footer>
+
+    <!-- Include html2pdf.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+    <script>
+        // Function to download the entire page as PDF
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            var element = document.body; 
+            html2pdf().from(element).save(); 
+        });
+
+        // Function to share on WhatsApp
+        function shareOnWhatsApp() {
+            const text = encodeURIComponent("Check out this medicinal plant: Acacia catechu - It has various medicinal uses and is rich in tannins.");
+            const url = `https://api.whatsapp.com/send?text=${text}`;
+            window.open(url, '_blank');
+        }
+
+        // Function to share on LinkedIn
+        function shareOnTelegram() {
+            const text = encodeURIComponent("Check out this medicinal plant: Abelmoschus esculentus (L.) Moench - It has great medicinal properties. Here's more info: [Your URL here]");
+            const telegramUrl = `https://t.me/share/url?url=[Hellow]&text=${text}`;
+            window.open(telegramUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinal Plants - Aconitum balfourii Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS for image resizing and black border */
+        .image-container {
+            display: inline-block;
+            border: 2px solid black;
+            padding: 5px;
+            background-color: white;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: auto;
+        }
+
+        /* Other styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            margin-left: 1px;
+        }
+
+        header {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #plant-profile {
+            text-align: left;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: left;
+            margin-top: 50px;
+        }
+
+        /* Flexbox layout for Left-Center-Right alignment */
+        .buttons-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 20px;
+            max-width: 600px;
+        }
+
+        .buttons-container button {
+            width: 150px;
+            padding: 10px 0;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .download-btn {
+            background-color: #007bff;
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+
+        .telegram-btn {
+            background-color: #0088cc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>HerbaLife Hub. Where Nature Heals, Naturally</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Plant Catalog</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Plant Profile Section -->
+    <section id="plant-profile">
+        <h2>Aconitum balfourii Stapf: A Poisonous but Medicinal Plant</h2>
+        <div class="image-container">
+            <img src=https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000009929L.jpg alt="Aconitum balfourii Stapf">
+        </div>
+
+        <h3>Medicinal Uses:</h3>
+        <p>Despite its toxicity, A. balfourii has been used in traditional medicine for centuries to treat various ailments, including pain, inflammation, and fever. However, it's important to note that this plant is highly poisonous and should only be used under the guidance of a qualified healthcare professional.</p>
+
+        <h3>Cultivation and Harvesting Methods:</h3>
+        <p><strong>Propagation:</strong> A. balfourii can be propagated from seeds or division.</p>
+        <p><strong>Soil and Climate:</strong> It thrives in cool, mountainous climates and requires well-drained soil.</p>
+        <p><strong>Planting:</strong> The plant can be planted in gardens or containers.</p>
+        <p><strong>Harvesting:</strong> The roots and leaves can be harvested at different stages of the plant's growth.</p>
+        <p><strong>Caution:</strong> Due to its toxicity, harvesting A. balfourii should be done with extreme caution and protective gear.</p>
+
+        <h3>Ecological Importance:</h3>
+        <p>A. balfourii plays a role in the ecosystem as a food source for certain insects and animals.</p>
+
+        <h3>Toxicity:</h3>
+        <p>Aconitum balfourii is highly poisonous. Ingestion of any part of the plant can cause serious illness or death. Symptoms of poisoning can include nausea, vomiting, diarrhea, irregular heartbeat, and respiratory distress. If you suspect poisoning, seek medical attention immediately.</p>
+
+        <p><strong>Note:</strong> It's crucial to handle this plant with utmost care and avoid ingesting any part of it.</p>
+
+        <a href="https://www.amazon.in/s?k=Aconitum+balfourii&ref=nb_sb_noss" class="button">Buy Seeds on Amazon</a>
+
+        <!-- Buttons Container for Download, WhatsApp, and Telegram -->
+        <div class="buttons-container">
+            <button class="download-btn" id="downloadBtn">Download PDF</button>
+            <button class="whatsapp-btn" onclick="shareOnWhatsApp()">WhatsApp</button>
+            <button class="telegram-btn" onclick="shareOnTelegram()">Telegram</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; HerbaLife Hub. Where Nature Heals, Naturally.</p>
+    </footer>
+
+    <!-- Include html2pdf.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+    <script>
+        // Function to download the entire page as PDF
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            var element = document.body; // Select the whole body content
+            html2pdf()
+                .from(element)
+                .save(); // Save the page as a PDF
+        });
+
+        // Function to share on WhatsApp
+        function shareOnWhatsApp() {
+            const text = encodeURIComponent("Check out this poisonous but medicinal plant: Aconitum balfourii - It has potential medicinal properties. Here's more info: [Your URL here]");
+            const url = `https://api.whatsapp.com/send?text=${text}`;
+            window.open(url, '_blank');
+        }
+
+        // Function to share on Telegram
+        function shareOnTelegram() {
+            const text = encodeURIComponent("Check out this poisonous but medicinal plant: Aconitum balfourii - It has potential medicinal properties. Here's more info: [Your URL here]");
+            const telegramUrl = `https://t.me/share/url?url=[Your URL here]&text=${text}`;
+            window.open(telegramUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

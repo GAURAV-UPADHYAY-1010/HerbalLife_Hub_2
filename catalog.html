@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinal Plants - Catalog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>HerbaLife Hub. "Where Nature Heals, Naturally"</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Plant Catalog</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Catalog Section -->
+    <section id="catalog">
+        <h2>Plant Catalog</h2>
+        <input type="text" id="search" placeholder="Search plants..." onkeyup="searchPlants()">
+        <button id="voice-search" 
+        style="
+            padding: 10px; 
+            width: 50px; 
+            height: 50px; 
+            background: url('C:/Users/siri/OneDrive/Desktop/Gaurav/Screenshot 2024-12-02 150606.png') no-repeat center center; 
+            background-size: cover; 
+            border: none; 
+            border-radius: 50%; 
+            cursor: pointer; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.2s ease, box-shadow 0.2s ease;" 
+        onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 6px 8px rgba(0, 0, 0, 0.2)';" 
+        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';" 
+        onclick="toggleRecording()">
+    </button>
+    <p id="recording-status" style="font-size: 14px; color: green; font-weight: bold; margin-top: 10px;"></p>
+    
+    <script>
+        let isRecording = false;
+    
+        function toggleRecording() {
+            const statusElement = document.getElementById('recording-status');
+            const button = document.getElementById('voice-search');
+    
+            if (!isRecording) {
+                // Start recording
+                isRecording = true;
+                statusElement.textContent = 'Recording started...';
+                statusElement.style.color = 'red'; // Red text to indicate recording
+                button.style.boxShadow = '0 0 10px 2px red'; // Glow effect for visual feedback
+            } else {
+                // Stop recording
+                isRecording = false;
+                statusElement.textContent = 'Recording stopped.';
+                statusElement.style.color = 'green'; // Green text to indicate stop
+                button.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)'; // Revert button style
+            }
+        }
+    </script>
+    
+
+        <div id="plant-list">
+            <!-- Example Plant Card -->
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003881L.jpg" alt="Abelmoschus esculentus (L.) Moench">
+                <h3>Abelmoschus esculentus (L.) Moench</h3>
+                <p>Common Name: Bhindi, Bhindi tori</p>
+                <p>Family: MALVACEAE</p>
+                <p>Medicinal Benefits: Known for its rich dietary fiber, *Abelmoschus esculentus* helps in digestion and weight management. It's also used to control blood sugar levels and may have antioxidant properties.</p>
+                <a href="plant-profile.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003882L.jpg" alt="Abelmoschus ficulneus (L.) Wight & Arn.">
+                <h3>Abelmoschus ficulneus (L.) Wight & Arn.</h3>
+                <p>Common Name: Ran Bhendi</p>
+                <p>Family: MALVACEAE</p>
+                <p>Medicinal Benefits: Traditionally used in folk medicine, *Abelmoschus ficulneus* is believed to have anti-inflammatory and antioxidant properties, making it beneficial for various health issues.</p>
+                <a href="plant-profile1.html" class="button">View Profile</a>
+            </div>
+
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003879L.jpg" alt="Abelmoschus manihot (L.) Medik.">
+                <h3>Abelmoschus manihot (L.) Medik.</h3>
+                <p>Common Name: Jangli Bhindi, Kantalo Bhendo (Guj.)</p>
+                <p>Family: MALVACEAE</p>
+                <p>Medicinal Benefits: Known for its antioxidant, anti-inflammatory, and wound-healing properties. Used in treating fever and digestive disorders.</p>
+                <a href="plant-profile2.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003878L.jpg" alt="Abelmoschus moschatus Medik.">
+                <h3>Abelmoschus moschatus Medik.</h3>
+                <p>Common Name: Muskdana, Kasturi dana</p>
+                <p>Family: MALVACEAE</p>
+                <p>Medicinal Benefits: Used for its antioxidant, anti-inflammatory, and antimicrobial properties. Traditionally used to treat respiratory and skin conditions.</p>
+                <a href="plant-profile3.html" class="button">View Profile</a>
+            </div>
+            
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000009739L.jpg" alt="Abies spectabilis (D. Don) Spach.">
+                <h3>Abies spectabilis (D. Don) Spach.</h3>
+                <p>Common Name: Talish patra, Gobra salla (Nepal)</p>
+                <p>Family: PINACEAE</p>
+                <p>Medicinal Benefits: Known for its anti-inflammatory and analgesic properties. Traditionally used to treat cough, asthma, and rheumatism.</p>
+                <a href="plant-profile4.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003861L.jpg" alt="Abroma agusta (L.) L.f.">
+                <h3>Abroma agusta (L.) L.f.</h3>
+                <p>Common Name: Ulatkambal</p>
+                <p>Family: STERCULIACEAE</p>
+                <p>Medicinal Benefits: Used to treat menstrual disorders, diabetes, and nerve-related issues. It has analgesic and anti-inflammatory properties.</p>
+                <a href="plant-profile5.html" class="button">View Profile</a>
+            </div>
+            
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003654L.jpg" alt="Abrus precatorius L.">
+                <h3>Abrus precatorius L.</h3>
+                <p>Common Name: Ratti, Ghungchi</p>
+                <p>Family: FABACEAE</p>
+                <p>Medicinal Benefits: Known for its use in treating inflammation, fever, and respiratory disorders. However, it is highly toxic if not used properly.</p>
+                <a href="plant-profile6.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003898L.jpg" alt="Abutilon hirtum (Lam.) Sweet">
+                <h3>Abutilon hirtum (Lam.) Sweet</h3>
+                <p>Common Name: Barakanghi</p>
+                <p>Family: MALVACEAE</p>
+                <p>Medicinal Benefits: Traditionally used for treating cough, bronchitis, and urinary tract infections. It also has anti-inflammatory properties.</p>
+                <a href="plant-profile7.html" class="button">View Profile</a>
+            </div>
+            
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003895L.jpg" alt="Abutilon indicum (L.) Sweet">
+                <h3>Abutilon indicum (L.) Sweet</h3>
+                <p>Common Name: Kanghi, Kakahi</p>
+                <p>Family: MALVACEAE</p>
+                <p>Medicinal Benefits: Widely used in Ayurveda for treating fever, inflammation, and urinary disorders. It also has antimicrobial and antioxidant properties.</p>
+                <a href="plant-profile8.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003896L.jpg" alt="Abutilon pannosum (Forst.) Schlect.">
+                <h3>Abutilon pannosum (Forst.) Schlect.</h3>
+                <p>Common Name: Kakrai</p>
+                <p>Family: MALVACEAE</p>
+                <p>Medicinal Benefits: Traditionally used to treat skin ailments, wounds, and respiratory conditions. Known for its anti-inflammatory properties.</p>
+                <a href="plant-profile9.html" class="button">View Profile</a>
+            </div>
+            
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003897L.jpg" alt="Abutilon theophrastii Medik.">
+                <h3>Abutilon theophrastii Medik.</h3>
+                <p>Common Name: Indian Mallow (Eng.)</p>
+                <p>Family: MALVACEAE</p>
+                <p>Medicinal Benefits: Used in traditional medicine to treat respiratory conditions, skin problems, and fevers. Known for its anti-inflammatory and wound healing properties.</p>
+                <a href="plant-profile10.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003537L.jpg" alt="Acacia catechu (L.f.) Willd.">
+                <h3>Acacia catechu (L.f.) Willd.</h3>
+                <p>Common Name: Khair</p>
+                <p>Family: MIMOSACEAE</p>
+                <p>Medicinal Benefits: Widely used in Ayurvedic medicine for treating sore throats, coughs, and skin diseases. It has astringent, anti-inflammatory, and antimicrobial properties.</p>
+                <a href="plant-profile11.html" class="button">View Profile</a>
+            </div>
+            
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003548L.jpg" alt="Acacia farnesiana (L.) Willd.">
+                <h3>Acacia farnesiana (L.) Willd.</h3>
+                <p>Common Name: Vilayati kikar</p>
+                <p>Family: MIMOSACEAE</p>
+                <p>Medicinal Benefits: Known for its antiseptic, antimicrobial, and anti-inflammatory properties. Used traditionally to treat wounds, skin infections, and respiratory issues.</p>
+                <a href="plant-profile12.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003539L.jpg" alt="Acacia jacquemontii Benth.">
+                <h3>Acacia jacquemontii Benth.</h3>
+                <p>Common Name: Kikar, Babul (Punjab)</p>
+                <p>Family: MIMOSACEAE</p>
+                <p>Medicinal Benefits: Traditionally used for its astringent and anti-inflammatory properties. Known to be effective in treating gastrointestinal issues and skin problems.</p>
+                <a href="plant-profile13.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003540L.jpg" alt="Acacia leucophloea (Roxb.) Willd.">
+                <h3>Acacia leucophloea (Roxb.) Willd.</h3>
+                <p>Common Name: Safed kikar, Arimeda</p>
+                <p>Family: MIMOSACEAE</p>
+                <p>Medicinal Benefits: Used in traditional medicine for its diuretic, astringent, and anti-inflammatory properties. It’s commonly employed in the treatment of coughs, colds, and skin diseases.</p>
+                <a href="plant-profile14.html" class="button">View Profile</a>
+            </div>
+            
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003532L.jpg" alt="Acacia modesta Wall.">
+                <h3>Acacia modesta Wall.</h3>
+                <p>Common Name: Phulai (Punjab)</p>
+                <p>Family: MIMOSACEAE</p>
+                <p>Medicinal Benefits: Known for its anti-inflammatory and analgesic properties. Used traditionally to treat joint pain, arthritis, and digestive issues.</p>
+                <a href="plant-profile15.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003542L.jpg" alt="Acacia nilotica (L.) Willd. ex Delile">
+                <h3>Acacia nilotica (L.) Willd. ex Delile</h3>
+                <p>Common Name: Kirkar, Babula</p>
+                <p>Family: MIMOSACEAE</p>
+                <p>Medicinal Benefits: Has antimicrobial, astringent, and anti-inflammatory properties. Commonly used to treat coughs, colds, sore throats, and as a remedy for skin infections.</p>
+                <a href="plant-profile16.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003528L.jpg" alt="Acacia pennata (L.) Willd.">
+                <h3>Acacia pennata (L.) Willd.</h3>
+                <p>Common Name: Aila, Biswal</p>
+                <p>Family: MIMOSACEAE</p>
+                <p>Medicinal Benefits: Traditionally used for its anti-inflammatory and analgesic properties. Known to aid in digestion and alleviate skin problems.</p>
+                <a href="plant-profile17.html" class="button">View Profile</a>
+            </div>
+            
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003535L.jpg" alt="Acacia rugata (Lam.) Merr.">
+                <h3>Acacia rugata (Lam.) Merr.</h3>
+                <p>Common Name: Kochi, Ritha</p>
+                <p>Family: MIMOSACEAE</p>
+                <p>Medicinal Benefits: Traditionally used for its cleansing properties, particularly in hair care and skincare products. Also used to treat digestive problems and as a natural cleanser.</p>
+                <a href="plant-profile18.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003534L.jpg" alt="Acacia senegal (L.) Willd.">
+                <h3>Acacia senegal (L.) Willd.</h3>
+                <p>Common Name: Goradio-babul (Guj.)</p>
+                <p>Family: MIMOSACEAE</p>
+                <p>Medicinal Benefits: Known for its gum, "gum arabic," which has been used for centuries in medicinal preparations. It has soothing, anti-inflammatory, and demulcent properties, often used to treat respiratory and digestive issues.</p>
+                <a href="plant-profile19.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003536L.jpg" alt="Acacia torta (Roxb.) Craib">
+                <h3>Acacia torta (Roxb.) Craib</h3>
+                <p>Common Name: Aila</p>
+                <p>Family: MIMOSACEAE</p>
+                <p>Medicinal Benefits: Traditionally used to treat skin ailments, wounds, and infections. It also possesses anti-inflammatory and analgesic properties, aiding in pain relief.</p>
+                <a href="plant-profile20.html" class="button">View Profile</a>
+            </div>
+            
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000008970L.jpg" alt="Acalypha fruticosa Forsk.">
+                <h3>Acalypha fruticosa Forsk.</h3>
+                <p>Common Name: Chinniaka (Tel.)</p>
+                <p>Family: EUPHORBIACEAE</p>
+                <p>Medicinal Benefits: Traditionally used to treat various skin conditions and to relieve inflammation. The leaves can also be used as a poultice for wounds and injuries.</p>
+                <a href="plant-profile21.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000008971L.jpg" alt="Acalypha indica L.">
+                <h3>Acalypha indica L.</h3>
+                <p>Common Name: Kuppi, Khokli</p>
+                <p>Family: EUPHORBIACEAE</p>
+                <p>Medicinal Benefits: Known for its anti-inflammatory and analgesic properties. Used in traditional medicine to treat respiratory issues and skin ailments, as well as to promote healing.</p>
+                <a href="plant-profile22.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000008969L.jpg" alt="Acalypha racemosa Wall. ex Bailley">
+                <h3>Acalypha racemosa Wall. ex Bailley</h3>
+                <p>Common Name: Valia-kuppameni (Finnish)</p>
+                <p>Family: EUPHORBIACEAE</p>
+                <p>Medicinal Benefits: Traditionally used for its anti-inflammatory properties. The plant is also utilized in treating digestive disorders and as a tonic for general health.</p>
+                <a href="plant-profile23.html" class="button">View Profile</a>
+            </div>
+            
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003156L.jpg" alt="Acampe papillosa (Lindl.) Lindl.">
+                <h3>Acampe papillosa (Lindl.) Lindl.</h3>
+                <p>Common Name: Alasyakampa (Tel.)</p>
+                <p>Family: ORCHIDACEAE</p>
+                <p>Medicinal Benefits: Used in traditional medicine for its potential anti-inflammatory properties. The plant is also believed to have benefits in treating respiratory disorders.</p>
+                <a href="plant-profile24.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000009055L.jpg" alt="Acanthus illicifolius L.">
+                <h3>Acanthus illicifolius L.</h3>
+                <p>Common Name: Hargoza</p>
+                <p>Family: ACANTHACEAE</p>
+                <p>Medicinal Benefits: Known for its anti-inflammatory and analgesic effects. Traditionally used to treat skin conditions and as a remedy for various ailments.</p>
+                <a href="plant-profile25.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000013619L.jpg" alt="Achillea millefolium L.">
+                <h3>Achillea millefolium L.</h3>
+                <p>Common Name: Gandana, Roojamari (Kan.)</p>
+                <p>Family: ASTERACEAE</p>
+                <p>Medicinal Benefits: Widely recognized for its wound-healing properties. Traditionally used to reduce inflammation, promote digestion, and alleviate menstrual discomfort.</p>
+                <a href="plant-profile26.html" class="button">View Profile</a>
+            </div>
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000008913L.jpg" alt="Achyranthes aspera L.">
+                <h3>Achyranthes aspera L.</h3>
+                <p>Common Name: Latjira</p>
+                <p>Family: AMARANTHACEAE</p>
+                <p>Medicinal Benefits: Traditionally used to treat various ailments, including inflammation, arthritis, and respiratory issues. Known for its analgesic and anti-inflammatory properties.</p>
+                <a href="plant-profile27.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000008912L.jpg" alt="Achyranthes bidentata Blume">
+                <h3>Achyranthes bidentata Blume</h3>
+                <p>Common Name: Apamarga (Assam)</p>
+                <p>Family: AMARANTHACEAE</p>
+                <p>Medicinal Benefits: Known for its diuretic and anti-inflammatory properties. Used in traditional medicine to treat kidney stones and urinary disorders.</p>
+                <a href="plant-profile28.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000009929L.jpg" alt="Aconitum balfourii Stapf">
+                <h3>Aconitum balfourii Stapf</h3>
+                <p>Common Name: Gobari (West Nepal)</p>
+                <p>Family: RANUNCULACEAE</p>
+                <p>Medicinal Benefits: Traditionally used for its analgesic and anti-inflammatory effects. Caution is advised due to its toxic properties if misused.</p>
+                <a href="plant-profile29.html" class="button">View Profile</a>
+            </div>
+            
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000009935L.jpg" alt="Aconitum bisma (Buch. -Ham.) Rapaics">
+                <h3>Aconitum bisma (Buch. -Ham.) Rapaics</h3>
+                <p>Common Name: Bikhima</p>
+                <p>Family: RANUNCULACEAE</p>
+                <p>Medicinal Benefits: Used in traditional medicine for its analgesic and anti-inflammatory properties. It is often employed in treating fevers and rheumatism.</p>
+                <a href="plant-profile30.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000009927L.jpg" alt="Aconitum falconeri Stapf">
+                <h3>Aconitum falconeri Stapf</h3>
+                <p>Common Name: Bis (Gharwal)</p>
+                <p>Family: RANUNCULACEAE</p>
+                <p>Medicinal Benefits: Traditionally used for its anti-inflammatory and analgesic effects. Caution is advised due to its toxicity if misused.</p>
+                <a href="plant-profile31.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000009938L.jpg" alt="Aconitum heterophyllum Wall. ex Royle">
+                <h3>Aconitum heterophyllum Wall. ex Royle</h3>
+                <p>Common Name: Atis</p>
+                <p>Family: RANUNCULACEAE</p>
+                <p>Medicinal Benefits: Known for its use in traditional medicine as a remedy for fever and inflammation. It is also considered to have neuroprotective properties.</p>
+                <a href="plant-profile32.html" class="button">View Profile</a>
+            </div>
+            
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000009933L.jpg" alt="Aconitum laciniatum (Bruhl) Stapf">
+                <h3>Aconitum laciniatum (Bruhl) Stapf</h3>
+                <p>Common Name: Kalo bikhoma (Sikkim)</p>
+                <p>Family: RANUNCULACEAE</p>
+                <p>Medicinal Benefits: Traditionally used for its analgesic and anti-inflammatory properties. Often employed in treating pain and fever.</p>
+                <a href="plant-profile33.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000009928L.jpg" alt="Aconitum novoluridum Munz">
+                <h3>Aconitum novoluridum Munz</h3>
+                <p>Common Name: Mahoor</p>
+                <p>Family: RANUNCULACEAE</p>
+                <p>Medicinal Benefits: Known for its use in traditional medicine for treating various ailments, particularly in managing pain and inflammation.</p>
+                <a href="plant-profile34.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000009934L.jpg" alt="Aconitum spicatum (Bruhl) Stapf">
+                <h3>Aconitum spicatum (Bruhl) Stapf</h3>
+                <p>Common Name: Bikh or Bish (Nepal & Sikkim)</p>
+                <p>Family: RANUNCULACEAE</p>
+                <p>Medicinal Benefits: Used in traditional practices for its analgesic properties and is often sought after for its ability to alleviate pain.</p>
+                <a href="plant-profile35.html" class="button">View Profile</a>
+            </div>
+            
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000009931L.jpg" alt="Aconitum violaceum Jacq. Ex Stapf">
+                <h3>Aconitum violaceum Jacq. Ex Stapf</h3>
+                <p>Common Name: Tilia Kachang (Sutlej Basin)</p>
+                <p>Family: RANUNCULACEAE</p>
+                <p>Medicinal Benefits: Traditionally used for its anti-inflammatory properties and as a pain reliever. It is often utilized in the treatment of various ailments.</p>
+                <a href="plant-profile36.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003221L.jpg" alt="Acorus calamus L.">
+                <h3>Acorus calamus L.</h3>
+                <p>Common Name: Bach, Gora-bach</p>
+                <p>Family: ARACEAE</p>
+                <p>Medicinal Benefits: Known for its therapeutic properties, often used to enhance digestion, relieve anxiety, and improve cognitive functions.</p>
+                <a href="plant-profile37.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000009965L.jpg" alt="Acronychia pedunculata (L.) Miq.">
+                <h3>Acronychia pedunculata (L.) Miq.</h3>
+                <p>Common Name: Paowlay (Nepal)</p>
+                <p>Family: RUTACEAE</p>
+                <p>Medicinal Benefits: Used traditionally for its antimicrobial and anti-inflammatory properties, often utilized in treating skin conditions and digestive issues.</p>
+                <a href="plant-profile38.html" class="button">View Profile</a>
+            </div>
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000009925L.jpg" alt="Actaea spicata L.">
+                <h3>Actaea spicata L.</h3>
+                <p>Common Name: Vishaphala (Kan.)</p>
+                <p>Family: RANUNCULACEAE</p>
+                <p>Medicinal Benefits: Traditionally used to treat various ailments, including inflammation and pain relief, and known for its sedative properties.</p>
+                <a href="plant-profile39.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003275L.jpg" alt="Actiniopteris radiata(Swartz) Link">
+                <h3>Actiniopteris radiata(Swartz) Link</h3>
+                <p>Common Name: Morpankhi, Morshikha (Local names)</p>
+                <p>Family: ACTINIOPTERIDACEAE</p>
+                <p>Medicinal Benefits: Known for its use in traditional medicine, often employed for its anti-inflammatory and digestive benefits.</p>
+                <a href="plant-profile40.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000008845L.jpg" alt="Actinodaphne hookeri Meissn.">
+                <h3>Actinodaphne hookeri Meissn.</h3>
+                <p>Common Name: Tudambo (Oriya)</p>
+                <p>Family: LAURACEAE</p>
+                <p>Medicinal Benefits: Traditionally used for its anti-inflammatory and analgesic properties, often applied in treating respiratory issues.</p>
+                <a href="plant-profile41.html" class="button">View Profile</a>
+            </div>
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003871L.jpg" alt="Adansonia digitata L.">
+                <h3>Adansonia digitata L.</h3>
+                <p>Common Name: Gorak, Amli</p>
+                <p>Family: BOMBACACEAE</p>
+                <p>Medicinal Benefits: Known for its high vitamin C content, this plant is used traditionally to boost immunity and treat various ailments, including digestive issues.</p>
+                <a href="plant-profile42.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003924L.jpg" alt="Adenanthera pavonia L.">
+                <h3>Adenanthera pavonia L.</h3>
+                <p>Common Name: Barigumchi, Kunchandana (Sans.)</p>
+                <p>Family: MIMOSACEAE</p>
+                <p>Medicinal Benefits: Often used in traditional medicine for its anti-inflammatory and antipyretic properties, helping to reduce fever and relieve pain.</p>
+                <a href="plant-profile43.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000013800L.jpg" alt="Adenia wightiana (Wall. ex Wight & Arn.) Engl.">   
+                <h3>Adenia wightiana (Wall. ex Wight & Arn.) Engl.</h3>
+                <p>Common Name: Perumkorattaikodi (Tam.)</p>
+                <p>Family: PASSIFLORACEAE</p>
+                <p>Medicinal Benefits: Used for its medicinal properties, particularly in treating skin conditions and as an anti-inflammatory agent.</p>
+                <a href="plant-profile44.html" class="button">View Profile</a>
+            </div>
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000013621L.jpg" alt="Adenostemma lavenia (L.) Kuntze">
+                <h3>Adenostemma lavenia (L.) Kuntze</h3>
+                <p>Common Name: Jangli-jira</p>
+                <p>Family: ASTERACEAE</p>
+                <p>Medicinal Benefits: Known for its anti-inflammatory and antioxidant properties, it is often used in traditional medicine to treat various skin ailments and digestive issues.</p>
+                <a href="plant-profile45.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003284L.jpg" alt="Adiantum caudatum L.">
+                <h3>Adiantum caudatum L.</h3>
+                <p>Common Name: Mayurshikha (Sans.)</p>
+                <p>Family: ADIANTACEAE</p>
+                <p>Medicinal Benefits: Traditionally used for its properties in treating respiratory issues, it may help in alleviating cough and promoting lung health.</p>
+                <a href="plant-profile47.html" class="button">View Profile</a>
+            </div>
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003285L.jpg" alt="Adiantum philippense L.">
+                <h3>Adiantum philippense L.</h3>
+                <p>Common Name: Kalijhant</p>
+                <p>Family: ADIANTACEAE</p>
+                <p>Medicinal Benefits: Often utilized in traditional medicine for its antimicrobial and antifungal properties, it is also thought to support hair health and reduce dandruff.</p>
+                <a href="plant-profile48.html" class="button">View Profile</a>
+            </div>
+            
+            
+            
+            <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000003279L.jpg" alt="Adiantum venustum D.Don">
+                <h3>Adiantum venustum D.Don</h3>
+                <p>Common Name: Mayir sikki (Tam.)</p>
+                <p>Family: ADIANTACEAE</p>
+                <p>Medicinal Benefits: Antioxidant, anti-inflammatory, and used for skin diseases and digestive issues.</p>
+                <a href="plant-profile49.html" class="button">View Profile</a>
+              </div>
+              
+            
+            
+              <div class="plant-card">
+                <img src="https://archive.bsi.gov.in/uploads/documents/EconomicHerbarium/english/ImgCAL0000009952L.jpg" alt="Adonis aestivalis L.">
+                <h3>Adonis aestivalis L.</h3>
+                <p>Common Name: Summer Pheasant's Eye (Eng.)</p>
+                <p>Family: RANUNCULACEAE</p>
+                <p>Medicinal Benefits: Traditionally used for its cardiotonic properties, it is known to support heart health and is often employed in herbal medicine for managing conditions related to heart function.</p>
+                <a href="plant-profile50.html" class="button">View Profile</a>
+            </div>
+            
+            <!-- Repeat for each plant as needed -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; HerbaLife Hub. "Where Nature Heals, Naturally".</p>
+    </footer>
+    <script>
+        // Advanced JavaScript function for plant search
+        function searchPlants() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const plants = document.getElementsByClassName('plant-card');
+            
+            for (let i = 0; i < plants.length; i++) {
+                const plant = plants[i];
+                const scientificName = plant.getElementsByTagName('h3')[0].textContent.toLowerCase();
+                const commonName = plant.getElementsByTagName('p')[0].textContent.toLowerCase();
+                const family = plant.getElementsByTagName('p')[1].textContent.toLowerCase();
+                const medicinalBenefits = plant.getElementsByTagName('p')[2].textContent.toLowerCase(); // Added line
+                
+                // Combine all searchable text
+                const searchableText = `${scientificName} ${commonName} ${family} ${medicinalBenefits}`; // Updated line
+                
+                // Check if the search input matches any part of the searchable text
+                plant.style.display = searchableText.includes(searchInput) ? '' : 'none';
+            }
+        }
+
+        // Add event listener to search input for real-time search
+        document.getElementById('search').addEventListener('input', searchPlants);
+
+          // Add event listener to search input for real-time search
+          //document.getElementById('search').addEventListener('input', searchPlants);
+
+        const voiceSearchButton = document.getElementById('voice-search');
+        const searchInput = document.getElementById('search');
+
+         voiceSearchButton.addEventListener('click', () => {
+             const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+             recognition.lang = 'en-US';
+
+             recognition.onstart = () => {
+                console.log('Voice recognition started...');
+            };
+
+             recognition.onspeechend = () => {
+                recognition.stop();
+            };
+
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                searchInput.value = transcript;
+                searchPlants(); // Trigger the search
+            };
+            recognition.onerror = (event) => {
+               console.error('Voice recognition error:', event.error);
+            };
+
+            recognition.start();
+});
+
+        
+    </script>
+</body>
+</html>
